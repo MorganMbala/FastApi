@@ -1,0 +1,182 @@
+:root{
+  --bg:#ffffff;
+  --fg:#0b0b0b;
+  --muted:#6b6b6b;
+  --border:#eaeaea;
+  --focus:#111111;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Center the entire app */
+#root{
+  min-height:100vh;
+  display:block; /* stop vertical centering to avoid overlap with sticky bar */
+}
+
+/* Sticky top bar containing the title and create form */
+.topbar{
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  z-index:10;
+  padding-top:12px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.count-badge{
+  position:absolute;
+  left:16px;
+  top:12px;
+  height:28px;
+  padding:0 10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#0b0b0b;
+  color:#fff;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+/* Ensure container uses full width up to its max */
+.container{
+  width:100%;
+  max-width:1000px;
+  margin:0; /* aligner à gauche, plus de centrage horizontal */
+  padding:16px 24px 80px; /* reduce top padding because of sticky bar */
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:center; /* center title */
+  flex-direction:column;
+  gap:6px;
+  margin-bottom:16px;
+}
+.title{
+  font-size:36px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.title .count{
+  font-size:18px;
+  font-weight:500;
+  color:var(--muted);
+  margin-left:6px;
+}
+.subtle{color:var(--muted)}
+
+.form{
+  display:grid;
+  grid-template-columns: 120px 1fr 1fr 2fr auto;
+  gap:10px;
+  margin-bottom:24px;
+  max-width:900px;
+  margin-left:0; /* ne plus centrer */
+  margin-right:0; /* ne plus centrer */
+}
+.input{
+  height:42px;
+  padding:0 12px;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--fg);
+  border-radius:6px;
+  outline:none;
+  transition:border-color .2s ease;
+}
+.input:focus{border-color:var(--focus)}
+
+.btn{
+  height:42px;
+  padding:0 16px;
+  border-radius:6px;
+  font-weight:600;
+  letter-spacing:.02em;
+  cursor:pointer;
+  transition: all .2s ease;
+  border:1px solid transparent;
+}
+.btn-primary{
+  background:#0b0b0b;
+  color:#fff;
+}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-outline{
+  background:#fff;
+  color:var(--fg);
+  border-color:var(--fg);
+}
+.btn-outline:hover{background:#0b0b0b; color:#fff}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  gap:22px; /* slightly larger gap */
+  justify-content:flex-start; /* aligner la grille à gauche */
+  margin-top:16px; /* ensure spacing below the topbar */
+}
+.card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:16px;
+  background:#fff;
+}
+.card-media{
+  width:100%;
+  height:180px;
+  border-radius:10px;
+  object-fit:cover;
+  filter:grayscale(20%);
+}
+.card-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  margin-top:12px;
+}
+.card-title{font-weight:700; font-size:16px}
+.card-bio{color:var(--muted); margin-top:6px; line-height:1.4}
+.card-actions{display:flex; gap:8px; margin-top:12px; justify-content:center}
+
+.separator{height:1px; background:var(--border); margin:24px 0}
+
+@media (max-width:720px){
+  .form{grid-template-columns: 1fr 1fr;}
+  .form .span-2{grid-column: 1 / -1}
+}
+
+/* Modal (black & white) */
+.modal-backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,.45);
+  display:flex; align-items:center; justify-content:center;
+  padding:24px; z-index:1000;
+}
+.modal{
+  width:100%; max-width:560px; background:#fff; color:#0b0b0b;
+  border:1px solid var(--border); border-radius:12px; padding:20px 20px 16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+.modal-title{ font-size:20px; font-weight:700; margin:4px 0 14px; letter-spacing:.03em; }
+.modal-form{ display:flex; flex-direction:column; gap:10px; }
+.label{ font-size:12px; color:var(--muted); letter-spacing:.04em; text-transform:uppercase; margin-bottom:4px }
+.textarea{
+  min-height:90px; padding:10px 12px; resize:vertical;
+}
+.modal-actions{ display:flex; justify-content:flex-end; gap:8px; margin-top:6px }
