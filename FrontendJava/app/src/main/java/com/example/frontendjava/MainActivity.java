@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements ActeurAdapter.OnA
     private ActeurApiService service;
     private SwipeRefreshLayout swipeRefresh;
     private ShimmerFrameLayout shimmer;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements ActeurAdapter.OnA
         fabAdd = findViewById(R.id.fabAdd);
         swipeRefresh = findViewById(R.id.swipeRefresh);
         shimmer = findViewById(R.id.shimmerContainer);
-        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -102,6 +104,12 @@ public class MainActivity extends AppCompatActivity implements ActeurAdapter.OnA
         swipeRefresh.setRefreshing(false);
     }
 
+    private void updateCounter(int count) {
+        if (toolbar != null) {
+            toolbar.setTitle("Acteurs (" + count + ")");
+        }
+    }
+
     private void fetchActeurs() {
         startLoadingSkeleton();
         textError.setVisibility(View.GONE);
@@ -110,15 +118,19 @@ public class MainActivity extends AppCompatActivity implements ActeurAdapter.OnA
             public void onResponse(@NonNull Call<List<Acteur>> call, @NonNull Response<List<Acteur>> response) {
                 stopLoadingSkeleton();
                 if (response.isSuccessful()) {
-                    adapter.setData(response.body());
+                    List<Acteur> list = response.body();
+                    adapter.setData(list);
+                    updateCounter(list == null ? 0 : list.size());
                 } else {
                     showError("Réponse serveur: " + response.code());
+                    updateCounter(0);
                 }
             }
             @Override
             public void onFailure(@NonNull Call<List<Acteur>> call, @NonNull Throwable t) {
                 stopLoadingSkeleton();
                 showError("Erreur réseau: " + t.getMessage());
+                updateCounter(0);
             }
         });
     }
