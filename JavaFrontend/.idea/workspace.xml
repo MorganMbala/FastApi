@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d441aeeb-110e-4c49-ab1b-83004f868728" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/api/ActeurApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/api/ActeurApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/api/RetrofitClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/api/RetrofitClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/model/Acteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/model/Acteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/ui/ActeurAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/ui/ActeurAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontendJava/app/src/main/res/layout/item_acteur.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/res/layout/item_acteur.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/api/ActeurApiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/api/RetrofitClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/model/Acteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/model/ActeurUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/java/com/example/frontendjava/ui/ActeurAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/res/layout/dialog_acteur.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontendJava/app/src/main/res/layout/item_acteur.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
