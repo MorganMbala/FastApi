@@ -1,0 +1,132 @@
+/* Thème ZARA : noir/blanc, typographie uniforme, éléments minimalistes */
+:root {
+    --z-black: #111;
+    --z-white: #fff;
+    --z-grey: #6b6b6b;
+    --z-border: #eaeaea;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.zara-theme {
+    background-color: var(--z-white);
+    color: var(--z-black);
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    letter-spacing: .2px;
+}
+
+.z-header .z-brand {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--z-black);
+    letter-spacing: 4px; /* style “marque” */
+}
+
+.z-nav .z-link {
+    color: var(--z-black);
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+    .z-nav .z-link:hover {
+        text-decoration: underline;
+    }
+
+.z-hr {
+    border: none;
+    border-top: 1px solid var(--z-border);
+}
+
+.z-btn {
+    background: var(--z-black);
+    color: var(--z-white);
+    border: 1px solid var(--z-black);
+    padding: 10px 18px;
+    font-size: 13px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    display: inline-block; /* garde la largeur au contenu */
+}
+
+.z-btn-outline {
+    background: transparent;
+    color: var(--z-black);
+    border: 1px solid var(--z-black);
+}
+
+.z-btn:hover {
+    opacity: .85;
+}
+
+.z-btn-outline:hover {
+    background: var(--z-black);
+    color: var(--z-white);
+}
+
+.z-count {
+    font-size: 14px;
+    color: var(--z-grey);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.z-card {
+    border: 1px solid var(--z-border);
+    padding: 16px 18px;
+    display: grid;
+    grid-template-columns: 72px 1fr auto;
+    gap: 18px;
+    align-items: center;
+    background: var(--z-white);
+}
+
+    .z-card + .z-card {
+        margin-top: 10px;
+    }
+
+.z-photo {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--z-border);
+}
+
+.z-name {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.z-bio {
+    color: var(--z-grey);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* coupe à 3 lignes */
+}
+
+.z-actions a {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.z-foot {
+    color: var(--z-grey);
+    font-size: 12px;
+}
+
+/* Formulaires */
+.z-form .form-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--z-grey);
+}
+
+.z-form .form-control, .z-form textarea {
+    border-radius: 0;
+    border-color: var(--z-border);
+}
