@@ -1,0 +1,18 @@
+@model FrontendAspNetCoreMVC.Models.Acteur
+@{
+    ViewData["Title"] = "Supprimer";
+}
+<h1 class="mb-4" style="letter-spacing:2px;">SUPPRIMER</h1>
+
+<div class="z-card mb-4">
+    <img class="z-photo" src="@Model.Picture" alt="@Model.Name" />
+    <div>
+        <div class="z-name">@Model.Name</div>
+        <div class="z-bio">@Model.Bio</div>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" asp-route-id="@Model.Id">
+    <button type="submit" class="z-btn">Confirmer la suppression</button>
+    <a asp-action="Index" class="z-btn-outline">Annuler</a>
+</form>

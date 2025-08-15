@@ -1,0 +1,31 @@
+@model FrontendAspNetCoreMVC.Models.Acteur
+@{
+    ViewData["Title"] = "Créer";
+}
+<h1 class="mb-4" style="letter-spacing:2px;">CRÉER</h1>
+
+<form asp-action="Create" method="post" class="z-form" style="max-width:720px;">
+    <div class="mb-3">
+        <label asp-for="Id" class="form-label"></label>
+        <input asp-for="Id" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Bio" class="form-label"></label>
+        <textarea asp-for="Bio" rows="6" class="form-control"></textarea>
+    </div>
+    <div class="mb-4">
+        <label asp-for="Picture" class="form-label"></label>
+        <input asp-for="Picture" class="form-control" placeholder="URL ou data:image;base64,..." />
+    </div>
+
+    <button type="submit" class="z-btn">Enregistrer</button>
+    <a asp-action="Index" class="z-btn-outline">Annuler</a>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
