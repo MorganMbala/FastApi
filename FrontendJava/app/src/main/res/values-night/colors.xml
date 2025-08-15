@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night monochrome palette (inverted emphasis) -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray50">#121212</color>
+    <color name="gray100">#1A1A1A</color>
+    <color name="gray200">#222222</color>
+    <color name="gray300">#2C2C2C</color>
+    <color name="gray600">#9E9E9E</color>
+    <color name="gray800">#D0D0D0</color>
+    <color name="gray900">#E8E8E8</color>
+
+    <!-- Semantic night mapping -->
+    <color name="colorBackground">@color/black</color>
+    <color name="colorSurface">@color/gray100</color>
+    <color name="colorOnBackground">@color/white</color>
+    <color name="colorOnSurface">@color/white</color>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorOnPrimary">@color/black</color>
+    <color name="colorBorder">@color/gray300</color>
+    <color name="colorSecondary">#FFFFFF</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorSecondaryContainer">#2C2C2C</color>
+    <color name="colorOnSecondaryContainer">#E8E8E8</color>
+    <color name="colorRipple">#66FFFFFF</color>
+</resources>

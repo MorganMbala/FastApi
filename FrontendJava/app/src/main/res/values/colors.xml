@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Monochrome palette -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray50">#FAFAFA</color>
+    <color name="gray100">#F5F5F5</color>
+    <color name="gray200">#EEEEEE</color>
+    <color name="gray300">#E0E0E0</color>
+    <color name="gray600">#757575</color>
+    <color name="gray800">#333333</color>
+    <color name="gray900">#111111</color>
+
+    <!-- Semantic -->
+    <color name="colorBackground">@color/white</color>
+    <color name="colorSurface">@color/gray100</color>
+    <color name="colorOnBackground">@color/black</color>
+    <color name="colorOnSurface">@color/black</color>
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorBorder">@color/gray300</color>
+    <color name="colorSecondary">#000000</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#E0E0E0</color>
+    <color name="colorOnSecondaryContainer">#111111</color>
+    <color name="colorRipple">#33000000</color>
+</resources>
